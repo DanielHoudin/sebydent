@@ -1,0 +1,19 @@
+mixin post(obj)
+  article.post
+    .post-header
+      .post-header-inner
+        .post-header-inner-img
+          a(href=config.postLink)
+            +jpg(obj.img)
+    .post-footer
+      h4: a(href=config.postLink)= obj.title
+      .post-meta
+        dl
+          dt Date
+          dd: a(href=config.postLink): time(datetime='2018-01-22')= obj.date
+        dl
+          dt Posted by
+          dd: a(href=config.postLink)= obj.author
+        dl
+          dt Comments
+          dd: a(href=config.postLink)= obj.comments

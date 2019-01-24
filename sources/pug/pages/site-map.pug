@@ -1,0 +1,94 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-pagination
+
+block variables
+  - var activeCategory = 'Pages'
+  - var pageClass = ''
+
+block title
+  title Site Map
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  // Breadcrumbs
+  +breadcrumb-classic('images/bg-06.jpg', 'Site Map',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "Site Map"
+    }
+  }
+  )
+
+  // SiteMap
+  section.section.section-lg.bg-white
+    .shell
+      .range.range-30
+        .cell-md-2
+          h4: a(href='./') Home
+
+          h4: a(href='about.html') About us
+
+          h4: a(href='timetable.html') Timetable
+
+          h4: a(href='contacts.html') Contacts
+
+
+
+
+        .cell-md-8
+          .range.range-30
+            .cell-xs-5.cell-sm-25
+              h4: a(href='departments.html') Departments
+              ul.list-marked
+                li: a(href='#') Dentistry
+                li: a(href='#') Pulmonary
+                li: a(href='#') Cardiology
+                li: a(href='#') Pediatrics
+                li: a(href='#') Traumatology
+                li: a(href='#') Pediatrics
+                li: a(href='diagnostics.html') Diagnostics
+            .cell-xs-5.cell-sm-25
+              h4 Pages 1
+              ul.list-marked
+                li: a(href='our-doctors.html') Our Doctors
+                li: a(href='doctor-profile.html') Doctor Profile
+                li: a(href='news.html') News
+                li: a(href='news-page.html') News Page
+                li: a(href='careers.html') Careers
+                li: a(href='faq.html') FAQ
+                li: a(href='clients.html') Clients
+            .cell-xs-5.cell-sm-25
+              h4 Pages 2
+              ul.list-marked
+                li: a(href='coming-soon.html') Coming Soon
+                li: a(href='503-page.html') 503
+                li: a(href='404-page.html') 404
+                li: a(href='site-map.html') Site Map
+                li: a(href='privacy-policy.html') Privacy Policy
+                li: a(href='terms-of-use.html') Terms of Use
+                li: a(href='maintenance.html') Maintenance
+            .cell-xs-5.cell-sm-25
+              h4 Elements
+              ul.list-marked
+                li: a(href='typography.html') Typography
+                li: a(href='tabs-and-accordions.html') Tabs and accordions
+                li: a(href='progress-bars.html') Progress Bars
+                li: a(href='forms.html') Forms
+                li: a(href='tables.html') Tables
+                li: a(href='grid.html') Grid
+                li: a(href='buttons.html') Buttons
+
+  // Page Footer
+  include ../sections/_footer-default

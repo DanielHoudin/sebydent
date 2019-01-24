@@ -1,0 +1,68 @@
+section.section.section-sm.bg-white-lighter
+	.shell.shell-out
+		.range.range-30
+			.cell-sm-3.cell-xs-5
+				.preffix-xl-70(style='max-width: 274px')
+					h6.text-spacing-200.text-uppercase.font-base Contact us
+					.divider-modern
+					ul.list.list-md
+						li
+							.unit.unit-spacing-xs.unit-horizontal.unit-custom
+								.unit-left
+									span.icon.icon-md.icon-primary.mdi-phone
+								.unit-body
+									a.link-gray-darker(href='tel:#') +1 (409) 987–5874
+						li
+							.unit.unit-spacing-xs.unit-horizontal.unit-custom
+								.unit-left
+									span.icon.icon-md.icon-primary.mdi-email-outline
+								.unit-body(style='position: relative; top: 1px')
+									a.link-gray-darker(href='mailto:#') info@demolink.org
+
+			.cell-sm-3.cell-xs-5
+				.preffix-xl-70(style='max-width: 274px')
+					h6.text-spacing-200.text-uppercase.font-base clinic address
+					.divider-modern
+					ul.list.list-md
+						li
+							.unit.unit-spacing-xs.unit-horizontal
+								.unit-left
+									span.icon.icon-md-biger.icon-primary.mdi-map-marker
+								.unit-body(style='position: relative; top: -4px;')
+									a.link-default(href='#') 10 Firs Avenue, Muswell Hill, London N10
+
+			.cell-sm-4
+				.preffix-xl-70(style='max-width: 433px')
+					h6.text-spacing-200.text-uppercase.font-base Our departments
+					.divider-modern
+					ul.list-inline.list-inline-lg
+						li
+							ul.list.list-marked.list-marked-sm.list-marked-primary(style='line-height: 1.2')
+								li: a.link-default(href='#') Dentistry
+								li: a.link-default(href='#') Cardiology
+						li
+							ul.list.list-marked.list-marked-sm.list-marked-primary(style='line-height: 1.2')
+								li: a.link-default(href='#') Neurology
+								li: a.link-default(href='#') Traumatology
+						li
+							ul.list.list-marked.list-marked-sm.list-marked-primary(style='line-height: 1.2')
+								li: a.link-default(href='#') Pediatric
+								li: a.link-default(href='#') Ophthalmology
+
+
+footer.page-footer.section.text-center
+	.shell.shell-out
+		.range.range-xs-reverse.range-10
+			.cell-xs-4.cell-sm-4.text-xs-right
+				.preffix-xl-70(style='max-width: 433px')
+					ul.list-inline
+						li: a.icon.icon-gray-darker.fa-facebook(href='#')
+						li: a.icon.icon-gray-darker.fa-twitter(href='#')
+						li: a.icon.icon-gray-darker.fa-google-plus(href='#')
+						li: a.icon.icon-gray-darker.fa-pinterest-p(href='#')
+			.cell-xs-6.cell-sm-6.text-xs-left
+				p.copyright.preffix-xl-70= config.brandName
+					="\t"
+					| &#169; #[span(class="copyright-year")].
+					=" "
+					a(href="privacy-policy.html") Privacy Policy

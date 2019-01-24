@@ -1,0 +1,105 @@
+extends  ../_skeleton
+
+include ../elements/_ui-panel
+
+block variables
+  - var activeCategory = 'Pages'
+
+block title
+  title FAQ
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  // Breadcrumbs
+  +breadcrumb-classic('images/bg-05.jpg', 'FAQ',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "FAQ"
+    }
+  }
+  )
+
+  // General Questions and FAQ
+  section.section.section-lg.bg-white
+    .shell
+      .range.range-30
+        .cell-md-5
+          .bg-white-lighter.block-section
+            h3.text-center General Questions
+            #accordion1.block-lg-small.panel-group.panel-group-custom.panel-group-corporate(role='tablist', aria-multiselectable='true')
+              +panel({
+                first: true,
+                panelClass: 'panel-corporate',
+                parentId: 'accordion1',
+                number: '1',
+                header: 'Can I track my order?'
+              })
+                p Yes, you can! After placing your order you will receive an order confirmation via email. Each order starts production 15 minutes after your order is placed. Within a few hours of you placing your order, you will receive an expected delivery time. When the order will be ready for delivery, you will receive another email with the tracking number and a link to trace the order online with the courier.
+              +panel({
+                panelClass: 'panel-corporate',
+                parentId: 'accordion1',
+                number: '2',
+                header: 'How can I change something in my order?'
+              })
+                p If you need to change something in your order, please contact us immediately. We usually process orders within 30 minutes, and once we have processed your order, we will be unable to make any changes.
+              +panel({
+                panelClass: 'panel-corporate',
+                parentId: 'accordion1',
+                number: '3',
+                header: 'How can I pay for my order?'
+              })
+                p We accept Visa, MasterCard, and American Express credit and debit cards for your convenience.
+              +panel({
+                panelClass: 'panel-corporate',
+                parentId: 'accordion1',
+                number: '4',
+                header: 'Can I return an item?'
+              })
+                p Please contact our administrators for more information on returning products purchased on our website.
+
+        .cell-md-5
+          .bg-white-lighter.block-section
+            h3.text-center Other Questions
+            #accordion2.block-lg-small.panel-group.panel-group-custom.panel-group-corporate(role='tablist', aria-multiselectable='true')
+              +panel({
+                first: true,
+                panelClass: 'panel-corporate',
+                parentId: 'accordion2',
+                number: '1',
+                header: 'Can I track my order?'
+              })
+                p Yes, you can! After placing your order you will receive an order confirmation via email. Each order starts production 15 minutes after your order is placed. Within a few hours of you placing your order, you will receive an expected delivery time. When the order will be ready for delivery, you will receive another email with the tracking number and a link to trace the order online with the courier.
+              +panel({
+                panelClass: 'panel-corporate',
+                parentId: 'accordion2',
+                number: '2',
+                header: 'How can I change something in my order?'
+              })
+                p If you need to change something in your order, please contact us immediately. We usually process orders within 30 minutes, and once we have processed your order, we will be unable to make any changes.
+              +panel({
+                panelClass: 'panel-corporate',
+                parentId: 'accordion2',
+                number: '3',
+                header: 'How can I pay for my order?'
+              })
+                p We accept Visa, MasterCard, and American Express credit and debit cards for your convenience.
+              +panel({
+                panelClass: 'panel-corporate',
+                parentId: 'accordion2',
+                number: '4',
+                header: 'Can I return an item?'
+              })
+                p Please contact our administrators for more information on returning products purchased on our website.
+
+  // Page Footer
+  include ../sections/_footer-default

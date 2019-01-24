@@ -1,0 +1,45 @@
+extends  ../_skeleton
+
+block variables
+  - var activeCategory = 'Pages'
+
+block title
+  title 503
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-03.jpg', '503',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "503"
+    }
+  }
+  )
+
+  // section 404
+  section.section.section-lg.bg-white.text-center
+    .shell
+      .range.range-xs-center
+        .cell-lg-8
+          h3 Service is Unavailable
+          p.heading-5.text-regular.text-default Sorry, we're offline right now to make our site even better.
+            br.veil.reveal-sm-block
+            =" "
+            | Please, come back later and check what we've been up to.
+          .button-group-modern
+            a.button.button-gray-drago-dark.button-effect-ujarak(href='./') Go to home page
+            span or
+            a.button.button-primary.button-effect-ujarak(href=config.contactLink) contact us
+
+  // Page Footer
+  include ../sections/_footer-default

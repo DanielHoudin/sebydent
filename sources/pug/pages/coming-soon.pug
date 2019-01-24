@@ -1,0 +1,30 @@
+extends  ../_skeleton
+
+block variables
+  - var activeCategory = 'Pages'
+
+block title
+  title Coming Soon
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  // We're getting ready to launch in
+  section.section
+    .parallax-container.parallax-container-modern(data-parallax-img='images/bg-04.jpg')
+      .parallax-content.section-lg.context-dark
+        .shell.text-center
+          h2 We're getting ready to launch in
+          .divider
+          .DateCountdown(data-date='2018-10-01 00:00:00' data-circle-fg-width='0.02' data-circle-bg-width='0.9' data-circle-bg='#ffffff' data-circle-inner-color='#ffffff')
+          .block-center(style='max-width: 674px')
+            p Stay tuned and subscribe to our newsletter.
+            form.rd-mailform.rd-mailform-inline(data-form-output='form-output-global', data-form-type='subscribe', method='post', action='bat/rd-mailform.php' style='text-align: center; justify-content: center;')
+              .form-wrap
+                label.form-label(for='newsletter-email') Your  E-mail
+                input#newsletter-email.form-input(type='email', name='email', data-constraints='@Email @Required')
+              button.button.button-effect-ujarak.button-primary.button-square(type='submit') subscribe
+  .divider-section
+  // Page Footer
+  include ../sections/_footer-default

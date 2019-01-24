@@ -1,0 +1,84 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_news
+
+block variables
+  - var activeCategory = 'Pages'
+
+block title
+  title News
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  // News
+  +breadcrumb-classic('images/bg-07.jpg', 'News',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "News"
+    }
+  }
+  )
+
+  section.section.section-lg.bg-white.text-left
+    .shell
+      .range.range-60.range-xs-center
+        .cell-md-7.cell-lg-5
+          +post({
+            'img': 'news-01-719x246',
+            'title': 'Helping Children Deal With Trauma',
+            'date': 'January 22, 2018',
+            'author': 'Amelia Condon',
+            'comments': '2'
+          })
+
+        .cell-md-7.cell-lg-5
+          +post({
+            'img': 'news-02-719x246',
+            'title': 'Do You Know the ABCs of Health Care?',
+            'date': 'January 22, 2018',
+            'author': 'Amelia Condon',
+            'comments': '2'
+          })
+
+        .cell-md-7.cell-lg-5.wow.jackInTheBox
+          +post({
+            'img': 'news-03-719x246',
+            'title': 'Stress at Work – How to Reduce?',
+            'date': 'January 22, 2018',
+            'author': 'Amelia Condon',
+            'comments': '2'
+          })
+
+        .cell-md-7.cell-lg-5.wow.jackInTheBox
+          +post({
+            'img': 'news-04-719x246',
+            'title': 'Top 5 Medical Technology Innovations',
+            'date': 'January 22, 2018',
+            'author': 'Amelia Condon',
+            'comments': '2'
+          })
+
+      ul.pagination-custom
+        li.active: span 1
+        li: a(href='#') 2
+        li: a(href='#') 3
+        li: a(href='#') 4
+        li: span.no-hover ...
+        li: a(href='#') 12
+
+
+
+
+  // Page Footer
+  include ../sections/_footer-default

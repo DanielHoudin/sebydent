@@ -1,0 +1,42 @@
+extends  ../_skeleton
+
+block variables
+  - var activeCategory = 'Pages'
+
+block title
+  title 404
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-03.jpg', '404',
+  {
+      0: {
+          "title": "Home",
+          "href": "./"
+      },
+      1: {
+          "title": "Pages",
+          "href": "#"
+      },
+      2: {
+          "title": "404"
+      }
+  }
+  )
+
+  // section 404
+  section.section.section-lg.bg-white.text-center
+    .shell
+      .range.range-xs-center
+        .cell-lg-8
+          h3.text-regular Sorry, but page was not found
+          p.heading-5.text-regular.text-default You may have mistyped the address or the page may have moved.
+          .button-group-modern
+            a.button.button-gray-drago-dark.button-effect-ujarak(href='./') Go to home page
+            span or
+            a.button.button-primary.button-effect-ujarak(href=config.contactLink) contact us
+
+  // Page Footer
+  include ../sections/_footer-default

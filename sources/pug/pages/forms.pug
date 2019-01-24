@@ -1,0 +1,152 @@
+extends  ../_skeleton
+
+block variables
+  - var activeCategory = 'Pages'
+
+block title
+  title Forms
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  // Breadcrumbs
+  +breadcrumb-classic('images/bg-01.jpg', 'Forms',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "Forms"
+    }
+  }
+  )
+
+  section.section.section-lg.bg-white.text-center
+    .shell
+      .range.range-xs-center.range-60.range-lg-200
+        .cell-xs-12
+          .block-center(style='max-width: 520px')
+            h3 Forms
+            p
+              | With forms you can get almost any kind of information from your visitors, who will definitely appreciate this attractive element.
+            h4.text-regular Login form
+            ul.group.group-sm.group-middle.group-center
+              li
+                a.button.button-social.button-effect-ujarak.button-ellipse-md.button-facebook.button-icon.button-icon-left(href='#')
+                  span.icon.icon-md-biger.fa-facebook
+                  span.button-text Facebook
+              li
+                a.button.button-social.button-effect-ujarak.button-ellipse-md.button-twitter.button-icon.button-icon-left(href='#')
+                  span.icon.icon-md-biger.fa-twitter
+                  span.button-text Twitter
+              li
+                a.button.button-social.button-effect-ujarak.button-ellipse-md.button-google.button-icon.button-icon-left(href='#')
+                  span.icon.icon-md-biger.fa-google-plus
+                  span.button-text Google+
+            .form-divider
+              span.small.text-uppercase or
+            // RD Mailform
+            form.rd-mailform.text-left
+              .form-wrap.form-wrap-validation
+                label.form-label(for='forms-login-name') Username or E-mail
+                input#forms-login-name.form-input(type='text', name='name', data-constraints='@Required')
+              .form-wrap.form-wrap-validation
+                label.form-label(for='forms-login-password') Password
+                input#forms-login-password.form-input(type='password', name='password', data-constraints='@Required')
+              button.button.button-effect-ujarak.button-block.button-square.button-primary(type='submit') enter
+          .divider-edgewise
+          h4.text-regular Contact us
+          // RD Mailform
+          form.rd-mailform.block-center(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php' style='max-width: 584px')
+            .range.range-xs-center.range-20.range-narrow
+              .cell-sm-5
+                .form-wrap.form-wrap-validation
+                  label.form-label(for='forms-name') Your Name
+                  input#forms-name.form-input(type='text', name='name', data-constraints='@Required')
+              .cell-sm-5
+                .form-wrap.form-wrap-validation
+                  label.form-label(for='forms-phone') Phone
+                  input#forms-phone.form-input(type='text', name='phone', data-constraints='@Numeric @Required')
+              .cell-sm-10
+                .form-wrap.form-wrap-validation
+                  label.form-label(for='forms-message') Your Message
+                  textarea#forms-message.form-input(name='message', data-constraints='@Required')
+              .cell-sm-5
+                .form-wrap.form-wrap-validation
+                  label.form-label(for='forms-email') E-mail
+                  input#forms-email.form-input(type='email', name='email', data-constraints='@Email @Required')
+              .cell-sm-5
+                .form-button
+                  button.button.button-effect-ujarak.button-primary.button-block.button-square(type='submit') send message
+          .divider-edgewise
+          h4.text-regular Contact Form with ReCaptcha
+          // RD Mailform
+          form.rd-mailform.block-md-big(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .range.range-xs-center.range-20.range-sm-left
+              .cell-sm-5
+                .form-wrap.form-wrap-validation
+                  label.form-label(for='forms-2-name') Your Name
+                  input#forms-2-name.form-input(type='text', name='name', data-constraints='@Required')
+              .cell-sm-5
+                .form-wrap.form-wrap-validation
+                  label.form-label(for='forms-2-phone') Phone
+                  input#forms-2-phone.form-input(type='text', name='phone', data-constraints='@Numeric @Required')
+              .cell-sm-10
+                .form-wrap.form-wrap-validation
+                  label.form-label(for='forms-2-message') Your Message
+                  textarea#forms-2-message.form-input(name='message', data-constraints='@Required')
+              .cell-sm-5.gel-1
+                .form-wrap.form-wrap-validation
+                  label.form-label(for='forms-2-email') E-mail
+                  input#forms-2-email.form-input(type='email', name='email', data-constraints='@Email @Required')
+              .cell-sm-5
+                // Google captcha
+                .form-wrap.text-left.form-validation-left
+                  #captcha1.recaptcha(data-sitekey='6LfZlSETAAAAAC5VW4R4tQP8Am_to4bM3dddxkEt')
+              .cell-sm-5
+                .form-button
+                  button.button.button-effect-ujarak.button-primary.button-block.button-square(type='submit') send message
+
+          .divider-edgewise
+          .block-center(style='max-width: 675px')
+            h4.text-regular MailChimp
+            // Mailchimp
+            form.mailchimp-mailform.rd-mailform-inline.text-left(data-form-output='form-output-global', action='https://templatemonster.us15.list-manage.com/subscribe/post?u=ba5bb362073a413f48e4a7b90&id=8dc95d9dec', method='post')
+              .form-wrap
+                label.form-label(for='inline-email') Enter your e-mail
+                input#inline-email.form-input(type='email', name='email', data-constraints='@Email @Required')
+              button.button.button-effect-ujarak.button-primary.button-square(type='submit') Subscribe
+          .divider-edgewise
+          .block-center(style='max-width: 675px')
+            h4.text-regular Campaign Monitor
+            // Campaign Monitor
+            form.campaign-mailform.rd-mailform-inline.text-left(data-form-output='form-output-global', action='https://templatermonster.createsend.com/t/j/s/zjjikd/', method='post')
+              .form-wrap
+                label.form-label(for='campaign-email') Enter your e-mail
+                input#campaign-email.form-input(type='email', name='cm-zjjikd-zjjikd', data-constraints='@Email @Required')
+              button.button.button-effect-ujarak.button-primary.button-square(type='submit') Subscribe
+
+  section.section
+    .parallax-container(data-parallax-img='images/bg-02.jpg')
+      .parallax-content.section-lg.context-dark
+        .shell.text-center
+          .block-center(style='max-width: 670px')
+            h3 Subscribe to Our Newsletter
+            p.block-md.big
+              | Sign up to our newsletter and be the first to know about latest Medical Centre news, special offers, events, and discounts.
+            form.rd-mailform.rd-mailform-inline(data-form-output='form-output-global', data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+              .form-wrap
+                label.form-label(for='newsletter-email') info@demolink.org
+                input#newsletter-email.form-input(type='email', name='email', data-constraints='@Email @Required')
+              button.button.button-effect-ujarak.button-white.button-square(type='submit') subscribe
+
+  .divider-section
+
+  // Page Footer
+  include ../sections/_footer-default

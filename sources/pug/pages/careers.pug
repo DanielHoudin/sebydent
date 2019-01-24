@@ -1,0 +1,94 @@
+extends  ../_skeleton
+
+block variables
+  - var activeCategory = 'Pages'
+
+block title
+  title Careers
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  // Careers
+  +breadcrumb-classic('images/bg-08.jpg', 'Careers',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "Careers"
+    }
+  }
+  )
+
+  // Why choose us
+  section.section.section-lg.bg-white
+    .shell
+      .range.range-md-middle.range-30
+        .cell-md-6
+          .image-skew(style='max-width: 803px;')
+            .image-skew-inner
+              .image-skew-inner-img
+                +jpg('about-01-803x458')
+        .cell-md-4
+          h2.heading-with-aside-divider
+            span(style='max-width: 380px') Why Choose Us
+            span.divider
+          p We realize that our people are the heart of our business and we believe that having engaged people in winning teams ensures that we create memorable experiences for our patients each and every day, setting us apart from competitors.
+          ul.list-check.text-gray-darker
+            li Progression opportunities
+            li Training and development
+            li Integrity in all we do
+
+            li Continued growth
+
+
+
+          a.button.button-lg.button-effect-ujarak.button-primary(href='our-doctors.html') join our team now
+
+
+      h3 Open Positions
+      // Table
+      .table-custom-responsive
+        table.table-custom.table-custom-outline
+          thead
+            tr
+              th Job Posting Title
+              th Location
+              th Date
+              th Time
+              th Payment
+          tbody
+            tr
+              td Family Doctor
+              td Washington, D.C.
+              td January 8, 2018
+              td Full Time
+              td Rate
+            tr
+              td Paediatrician
+              td New York, NY
+              td January 3, 2018
+              td Full Time
+              td Rate
+            tr
+              td Registered & Paediatric Nurse
+              td San Diego, CA
+              td January 2, 2018
+              td Full Time
+              td Rate
+            tr
+              td Clinic Pharmacist
+              td Washington, D.C.
+              td January 2, 2018
+              td Full Time
+              td Rate
+
+  // Page Footer
+  include ../sections/_footer-default

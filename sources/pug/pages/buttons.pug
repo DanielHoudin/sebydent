@@ -1,0 +1,75 @@
+extends  ../_skeleton
+
+block variables
+  - var activeCategory = 'Pages'
+
+block title
+  title Buttons
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  // Buttons
+  +breadcrumb-classic('images/bg-01.jpg', 'Buttons',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "Buttons"
+    }
+  }
+  )
+
+
+  section.section.section-lg.bg-white.text-center
+    .shell
+      .range.range-60.range-lg-200
+        .cell-xs-10
+          h4 Button Sizes
+          p 4 different sizes: super, large, default and small.
+          .group.group-xl.group-middle.group-center
+            button.button-ellipse-md.button.button-effect-ujarak.button-xl.button-primary SUPER SIZE
+            button.button-ellipse-md.button.button-effect-ujarak.button-lg.button-primary Large size
+            button.button-ellipse-md.button.button-effect-ujarak.button-primary Default size
+            button.button-ellipse-md.button.button-effect-ujarak.button-sm.button-primary Small size
+          .divider-edgewise
+          h4 Button Shapes
+          p 4 different shapes: default, round, square, and circle.
+          .group.group-xl.group-middle.group-center
+            button.button-ellipse-md.button.button-effect-ujarak.button-primary.button-effect-ujarak Default
+            button.button-ellipse-md.button.button-effect-ujarak.button-ellipse-lg.button-primary Round
+            button.button.button-effect-ujarak.button-square.button-primary Square
+            button.button.button-effect-ujarak.button-circle.button-primary Circle
+          .divider-edgewise
+          h4 Buttons with Icons
+          p Buttons are fully integrated with 900+ icons.
+          .group.group-xl.group-middle.group-center
+            button.button-ellipse-md.button.button-effect-ujarak.button-primary.button-icon.button-icon-right
+              span.icon.icon-md-biger.material-icons-person_outline
+              span icon right
+            button.button-ellipse-md.button.button-effect-ujarak.button-primary.button-icon.button-icon-left
+              span.icon.icon-md-biger.material-icons-info_outline
+              span icon left
+            button.button-ellipse-md.button.button-effect-ujarak.button-default-outline.button-icon.button-icon-right
+              span.icon.icon-md-biger.material-icons-person_outline
+              span icon right
+            button.button-ellipse-md.button.button-effect-ujarak.button-default-outline.button-icon.button-icon-left
+              span.icon.icon-md-biger.material-icons-info_outline
+              span icon left
+          .divider-edgewise
+          h4 Buttons with Shadow
+          p Enhance your buttons with a shadow effect.
+          .group.group-xl.group-middle.group-center
+            button.button.button-effect-ujarak.button-primary.button-shadow.button-circle Shadow
+            button.button.button-effect-ujarak.button-white.button-shadow.button-circle Shadow
+
+
+  // Page Footer
+  include ../sections/_footer-default

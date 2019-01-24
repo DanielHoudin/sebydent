@@ -1,0 +1,62 @@
+// RD Navbar Nav
+ul.rd-navbar-nav
+  li(class=(activeCategory == 'Home' ? 'active' : ''))
+    a(href='./') Home
+  li(class=(activeCategory == 'About' ? 'active' : ''))
+    a(href='about.html') About us
+  li(class=(activeCategory == 'Departments' ? 'active' : ''))
+    a(href='departments.html') Departments
+    ul.rd-navbar-dropdown
+      li: a(href='#') Dental
+      li: a(href='#') Pulmonary
+      li: a(href='#') Cardiology
+      li: a(href='#') Cardiology
+      li: a(href='#') Neurology
+      li: a(href='#') Traumatology
+      li: a(href='#') Pediatric
+      li: a(href='diagnostics.html') Diagnostics
+  li(class=(activeCategory == 'Timetable' ? 'active' : ''))
+    a(href='timetable.html') Timetable
+  li(class=(activeCategory == 'Pages' ? 'active' : ''))
+    a(href='#') Pages
+    // RD Navbar Megamenu
+    ul.rd-navbar-megamenu
+      li.rd-navbar-megamenu-item
+        .rd-navbar-megamenu-item-inner
+          h6.rd-navbar-megamenu-title Pages 1
+          .rd-navbar-megamenu-divider
+          ul
+            li: a(href='our-doctors.html') Our Doctors
+            li: a(href='doctor-profile.html') Doctor Profile
+            li: a(href='news.html') News
+            li: a(href='news-page.html') News Page
+            li: a(href='careers.html') Careers
+            li: a(href='faq.html') FAQ
+            li: a(href='clients.html') Clients
+      li.rd-navbar-megamenu-item
+        .rd-navbar-megamenu-item-inner
+          h6.rd-navbar-megamenu-title Pages 2
+          .rd-navbar-megamenu-divider
+          ul
+            li: a(href='coming-soon.html') Coming Soon
+            li: a(href='503-page.html') 503
+            li: a(href='404-page.html') 404
+            li: a(href='site-map.html') Site Map
+            li: a(href='privacy-policy.html') Privacy Policy
+            li: a(href='terms-of-use.html') Terms of Use
+            li: a(href='maintenance.html') Maintenance
+      li.rd-navbar-megamenu-item
+        .rd-navbar-megamenu-item-inner
+          h6.rd-navbar-megamenu-title elements
+          .rd-navbar-megamenu-divider
+          ul
+            li: a(href='typography.html') Typography
+            li: a(href='tabs-and-accordions.html') Tabs and accordions
+            li: a(href='progress-bars.html') Progress Bars
+            li: a(href='forms.html') Forms
+            li: a(href='tables.html') Tables
+            li: a(href='grid.html') Grid
+            li: a(href='buttons.html') Buttons
+
+  li(class=(activeCategory == 'Contacts' ? 'active' : ''))
+    a(href='contacts.html') Contacts

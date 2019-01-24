@@ -1,0 +1,8 @@
+mixin single-element(obj)
+  li.single-event(data-start= obj.start, data-end=obj.end, data-event='event-' + obj.number)
+    a(href='#0')
+      span.event-name= obj.name
+      span.event-place= obj.place
+      span.this-time
+      span.event-content= obj.content
+      span.event-info= obj.info

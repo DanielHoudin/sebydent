@@ -1,0 +1,34 @@
+// TimeTable Colors
+$event-bg-color-1: darken(#57a0ea, 10); // Cardiology
+$event-bg-color-2: darken(#5194d7, 10); // Dentistry
+$event-bg-color-3: darken(#e99c7d, 10); // Ophtalmology
+$event-bg-color-4: darken(#c88ccc, 10); // Pediatrics
+$event-bg-color-5: darken(#77c7ad, 10); // Neurology
+$event-bg-color-6: darken(#6d89a5, 10); // Pulmonary
+$event-bg-color-7: darken(#749c8f, 10); // Traumatology
+$event-bg-color-8: darken(#9b869c, 10); // Diagnostics
+
+$event-color-1: #a1d0ff; // Cardiology
+$event-color-2: #85c2ff; // Dentistry
+$event-color-3: #ffd4c3; // Ophtalmology
+$event-color-4: #f1b8f5; // Pediatrics
+$event-color-5: #c4f6e6; // Neurology
+$event-color-6: #92aecb; // Pulmonary
+$event-color-7: #a1c4b9; // Traumatology
+$event-color-8: #c7b3c8; // Diagnostics
+
+// colors
+$text-color: #222222;
+$border-color: #EAEAEA;
+$bg-color: white;
+$link-color: $event-color-3;
+
+// fonts
+
+$primary-font: $font-family-base;
+
+//colum number
+
+$columns-number: 7;
+$row-height: 60px;
+

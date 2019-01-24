@@ -1,0 +1,44 @@
+extends  ../_skeleton
+
+block variables
+	- var activeCategory = 'Pages'
+
+block title
+	title Maintenance
+
+block page
+	// Page Header
+	include ../sections/_header-default
+
+	+breadcrumb-classic('images/bg-04.jpg', 'Maintenance',
+	{
+		0: {
+			"title": "Home",
+			"href": "./"
+		},
+		1: {
+			"title": "Pages",
+			"href": "#"
+		},
+		2: {
+			"title": "Maintenance"
+		}
+	}
+	)
+
+	section.section-lg.bg-white.text-center
+		.shell.text-center(style='padding: 0 15px')
+			.block-md-big
+				h4(style='color: #9b9b9b; font-weight: 400') We are currently working on
+				h3.offset(style='margin-top: 10px') This page will appear in
+			.DateCountdown.DateCountdown-style-1(data-date='2018-10-01 00:00:00' data-circle-fg-width='0.02' data-circle-bg-width='0.9' data-circle-bg='#f8f8f8' data-circle-inner-color='#f8f8f82')
+			.block-center(style='max-width: 674px') 
+				p.text-gray-darker We are preparing our website to give you the best user experience you can have on website.
+				form.rd-mailform.rd-mailform-inline(data-form-output='form-output-global', data-form-type='subscribe', method='post', action='bat/rd-mailform.php' style='text-align: center; justify-content: center;')
+					.form-wrap
+						label.form-label(for='newsletter-email') Your  E-mail
+						input#newsletter-email.form-input(type='email', name='email', data-constraints='@Email @Required' style='background-color: #f2f3f8')
+					button.button.button-effect-ujarak.button-primary.button-square(type='submit') subscribe
+
+	// Page Footer
+	include ../sections/_footer-default

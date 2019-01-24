@@ -1,0 +1,150 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-table-custom
+
+block variables
+  - var activeCategory = 'Pages'
+
+block title
+  title Tables
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'Tables',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Additional Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "Tables"
+    }
+  }
+  )
+
+  section.section.section-lg.bg-white.text-center
+    .shell
+      h3 Tables
+      p.large.block-md-big
+        | Tables have always been perfect for displaying facts and numbers. Now you can benefit from using them on your website.
+      .range.range-xs-center
+        .cell-sm-10.cell-lg-9.cell-xl-8
+          .table-custom-responsive
+            table.table-custom.table-custom-primary
+              thead
+                tr
+                  th Column 1
+                  th Column 2
+                  th Column 3
+                  th Column 4
+              tbody
+                tr
+                  td Item #1
+                  td Description
+                  td Subtotal
+                  td $3.00
+                tr
+                  td Item #2
+                  td Description
+                  td Discount
+                  td $3.00
+                tr
+                  td Item #3
+                  td Description
+                  td Shipping
+                  td $3.00
+                tr
+                  td Item #4
+                  td Description
+                  td Tax
+                  td $4.00
+              tfoot
+                tr
+                  td All Items
+                  td Description
+                  td Your Total
+                  td $13.00
+          .divider-edgewise
+          .table-custom-responsive
+            table.table-custom.table-custom-bordered
+              thead
+                tr
+                  th Column 1
+                  th Column 2
+                  th Column 3
+                  th Column 4
+              tbody
+                tr
+                  td Item #1
+                  td Description
+                  td Subtotal
+                  td $3.00
+                tr
+                  td Item #2
+                  td Description
+                  td Discount
+                  td $3.00
+                tr
+                  td Item #3
+                  td Description
+                  td Shipping
+                  td $3.00
+                tr
+                  td Item #4
+                  td Description
+                  td Tax
+                  td $4.00
+              tfoot
+                tr
+                  td All Items
+                  td Description
+                  td Your Total
+                  td $13.00
+          .divider-edgewise
+          .table-custom-responsive
+            table.table-custom.table-custom-striped.table-custom-primary
+              thead
+                tr
+                  th Column 1
+                  th Column 2
+                  th Column 3
+                  th Column 4
+              tbody
+                tr
+                  td Item #1
+                  td Description
+                  td Subtotal
+                  td $3.00
+                tr
+                  td Item #2
+                  td Description
+                  td Discount
+                  td $3.00
+                tr
+                  td Item #3
+                  td Description
+                  td Shipping
+                  td $3.00
+                tr
+                  td Item #4
+                  td Description
+                  td Tax
+                  td $4.00
+              tfoot
+                tr
+                  td All Items
+                  td Description
+                  td Your Total
+                  td $13.00
+
+
+
+  // Page Footer
+  include ../sections/_footer-default

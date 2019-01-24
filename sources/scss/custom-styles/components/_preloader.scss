@@ -1,0 +1,111 @@
+/*
+*
+* Page Loaders
+* --------------------------------------------------
+*/
+
+
+// Base styles
+// -------------------------
+
+.page-loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 9999999;
+  background: #fff;
+  transition: .3s all ease;
+
+  &.loaded {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+
+  &.ending {
+    display: none;
+  }
+
+  .page-loader-body {
+    text-align: center;
+    span {
+      display: none;
+      @media (min-width: $screen-xs-min) {
+        display: inline-block;
+      }
+    }
+    * + span {
+      margin-left: .45em;
+    }
+  }
+}
+
+// Custom Styles
+// -------------------------
+.indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(5);
+}
+.indicator svg polyline {
+  fill: none;
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.indicator svg polyline#back {
+  stroke: rgba($primary, .3 );
+}
+.indicator svg polyline#front {
+  stroke: $primary;
+  stroke-dasharray: 12, 36;
+  stroke-dashoffset: 48;
+  animation: dash 1s linear infinite;
+}
+.cta {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  color: #222;
+  font-weight: bold;
+}
+@-moz-keyframes dash {
+  62.5% {
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes dash {
+  62.5% {
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-o-keyframes dash {
+  62.5% {
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash {
+  62.5% {
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

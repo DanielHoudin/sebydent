@@ -1,0 +1,252 @@
+extends  ../_skeleton
+
+//- Includes
+include  ../elements/_block-componentz
+
+block variables
+  - var activeCategory = 'Departments'
+
+block title
+  title Diagnostics
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  // Diagnostics
+  +breadcrumb-classic('images/bg-11.jpg', 'Diagnostics',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Departments",
+      "href": 'departments.html'
+    },
+    2: {
+      "title": "Diagnostics"
+    }
+  }
+  )
+
+  // Laboratory Analysis
+  section.section.section-lg.bg-white.text-left
+    .shell
+      .range.range-60
+        .cell-lg-8
+          .object-lg
+            .object-lg-left
+              .image-skew(style='max-width: 652px')
+                .image-skew-inner
+                  .image-skew-inner-img
+                    +jpg('diagnostics-01-652x458')
+            .object-lg-right
+              h2 Laboratory Analysis
+              p We carry out over 22,000 tests per day from a range of over 2,600 tests available.We are one of the largest laboratories focusing on specialty diagnostic testing, with a strong reputation in many areas including infectious diseases, supported by its renowned competence in molecular biology.
+              a.button.button-albus.button-effect-ujarak(href='timetable.html')  View TimeTable
+
+          .block-services
+            .block-services-item
+              h4.block-services-title Services
+              .table-custom-responsive
+                table.table-custom
+                  tbody
+                    tr
+                      td Autoimmunity
+                      td $250
+                    tr
+                      td Haematology – Immunohematology
+                      td $150
+                    tr
+                      td Allergy Identification
+                      td $170
+                    tr
+                      td Microbiology
+                      td $250
+                    tr
+                      td Infectious Serology
+                      td $550
+                    tr
+                      td Toxicology - Dosages of drugs
+                      td $350
+            .block-services-item
+              .table-custom-responsive
+                table.table-custom
+                  tbody
+                    tr
+                      td Specialized Biochemistry
+                      td $250
+                    tr
+                      td Biological Oncology
+                      td $150
+                    tr
+                      td Treadmill stress testing
+                      td $170
+                    tr
+                      td Serum markers and Trisomy 21
+                      td $250
+                    tr
+                      td NIPT - Non Invasive Prenatal Testing
+                      td $550
+                    tr
+                      td Reproductive Biology
+                      td $350
+
+          .box.text-center.text-sm-left
+            .box-left
+              h2 Our Doctors
+            .box-right
+              .owl-outer-navigation#owl-carousel-nav
+                .owl-arrow.owl-arrow-prev.fl-budicons-free-left161
+                .owl-arrow.owl-arrow-next.fl-budicons-free-right163
+              a.button.button-albus.button-effect-ujarak(href='timetable.html')  View TimeTable
+
+          .divider-default
+          // Owl Carousel
+          .owl-carousel(data-items='1', data-sm-items='3' data-md-items='3' data-lg-items='4' data-stage-padding='0', data-loop='true', data-margin='30', data-mouse-drag="false" data-nav-custom="#owl-carousel-nav")
+            .item
+              +vip({
+                img: 'diagnostics-01-268x216',
+                title: 'Dr. Julia Jameson',
+                cite: 'Pediatrics'
+              })
+            .item
+              +vip({
+                img: 'diagnostics-02-268x216',
+                title: 'Dr. Rodney Stratton',
+                cite: 'Pulmonary'
+              })
+            .item
+              +vip({
+                img: 'diagnostics-03-268x216',
+                title: 'Dr. Amy Adams',
+                cite: 'Ophthalmology'
+              })
+            .item
+              +vip({
+                img: 'diagnostics-04-268x216',
+                title: 'Dr. Jason Clark',
+                cite: 'Cardiology'
+              })
+            .item
+              +vip({
+                img: 'diagnostics-05-268x216',
+                title: 'Dr. Rodney Stratton',
+                cite: 'Pulmonary'
+              })
+
+            .item
+              +vip({
+                img: 'diagnostics-06-268x216',
+                title: 'Dr. Jason Clark',
+                cite: 'Head Doctor, Neurology'
+              })
+
+            .item
+              +vip({
+                img: 'diagnostics-07-268x216',
+                title: 'Dr. Julia Jameson',
+                cite: 'Pediatrics'
+              })
+
+            .item
+              +vip({
+                img: 'diagnostics-08-268x216',
+                title: 'Dr. Jason Clark',
+                cite: 'Dentistry'
+              })
+
+
+
+        .cell-lg-2
+          .aside-info
+            .aside-info-item.aside-info-item-table
+              h4 Departments
+              ul
+                li: a(href='#') Neurology
+                li: a(href='#') Traumatology
+                li: a(href='#') Dentistry
+                li: a(href='#') Cardiology
+                li: a(href='#') Pulmonary
+                li: a(href='#') Pediatrics
+                li: a(href='#') ophtalmology
+                li: a(href='diagnostics.html') Diagnostics
+            .aside-info-item
+              h4 Opening Hours
+              div
+                dl
+                  dt Monday
+                  dd 8.00 – 17.00
+                dl
+                  dt Saturday
+                  dd 9.30 – 17.30
+                dl
+                  dt Sunday
+                  dd 9.30 – 15.00
+            .aside-info-item(style='padding: 0')
+              a(href='contacts.html'): +jpg('about-02-268x483')
+
+
+      .range.range-30
+        .cell-md-4.cell-lg-3.block-fix-height-wrap
+          .block-usually.block-fix-height
+            h3.text-spacing-0.text-center Useful info
+            ul.list-info
+              li
+                h5.list-info-title Cardiac electrophysiology
+                p Heart attacks may sometimes cause scarring of the heart, therefore it might start beating in an irregular pattern.
+              li
+                h5.list-info-title Echocardiography
+                p ECHO is a diagnostic test to evaluate the heart work. An echocardiogram uses ultrasound to take pictures of your heart.
+              li
+                h5.list-info-title Nuclear cardiology
+                p Our  nuclear cardiology program has been granted a three-year term of accreditation in nuclear cardiology.
+
+
+        .cell-md-6.cell-lg-5.block-fix-height-wrap
+          .form-block.block-fix-height
+            h3.text-spacing-0 Book an Appointment
+            p.text-spacing-50 We are available 24/7 by fax, e-mail or by phone. You can also use our contact form.
+            form.rd-mailform(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php')
+              .range.range-xs-center.range-20.range-narrow
+
+                .cell-sm-5
+                  .form-wrap.form-wrap-validation
+                    select.form-input.select-filter(data-style='modern' data-placeholder="Select a Department", data-minimum-results-for-search="Infinity", data-constraints="@Required")
+                      option(label="placeholder")
+                      option(value="2") Neurology
+                      option(value="3") Dentistry
+                      option(value="4") Cardiology
+                      option(value="5") Pediatrics
+                      option(value="6") Pulmonology
+                      option(value="7") Ophthalmology
+                      option(value="8") Diagnostics
+                      option(value="9") Diagnostics
+                    span.select-arrow
+                .cell-sm-5
+                  .form-wrap.form-wrap-validation
+                    label.form-label(for='forms-name') Your Name
+                    input#forms-name.form-input(type='text', name='name', data-constraints='@Required')
+                .cell-sm-5
+                  .form-wrap.form-wrap-validation
+                    label.form-label(for='forms-date') Date of Birth
+                    input#forms-date.form-input(type='text', name='name', data-constraints='@Required')
+                .cell-sm-5
+                  .form-wrap.form-wrap-validation
+                    label.form-label(for='forms-phone') Phone
+                    input#forms-phone.form-input(type='text', name='phone', data-constraints='@Numeric @Required')
+                .cell-sm-10
+                  .form-wrap.form-wrap-validation
+                    label.form-label(for='forms-message') Your Message
+                    textarea#forms-message.form-input(name='message', data-constraints='@Required')
+                .cell-sm-5
+                  .form-wrap.form-wrap-validation
+                    label.form-label(for='forms-email') E-mail
+                    input#forms-email.form-input(type='email', name='email', data-constraints='@Email @Required')
+                .cell-sm-5
+                  .form-button
+                    button.button.button-effect-ujarak.button-primary.button-block.button-square(type='submit') send message
+
+  // Page Footer
+  include ../sections/_footer-default

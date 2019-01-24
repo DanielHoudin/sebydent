@@ -1,0 +1,122 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_block-componentz
+
+block variables
+  - var activeCategory = 'Pages'
+
+block title
+  title Doctors
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  // Doctors
+  +breadcrumb-classic('images/bg-10.jpg', 'Doctors',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": '#'
+    },
+    2: {
+      "title": "Doctors"
+    }
+  }
+  )
+
+  // Laboratory Analysis
+  section.section.section-lg.bg-white.text-left
+    .shell
+      .range.range-60
+        .cell-lg-8
+          .range.range-35
+            .cell-xs-5.cell-sm-33.cell-md-25
+              +vip({
+                img: 'diagnostics-01-268x216',
+                title: 'Dr. Julia Jameson',
+                cite: 'Pediatrics'
+              })
+            .cell-xs-5.cell-sm-33.cell-md-25
+              +vip({
+                img: 'diagnostics-02-268x216',
+                title: 'Dr. Rodney Stratton',
+                cite: 'Pulmonary'
+              })
+            .cell-xs-5.cell-sm-33.cell-md-25
+              +vip({
+                img: 'diagnostics-03-268x216',
+                title: 'Dr. Amy Adams',
+                cite: 'Ophthalmology'
+              })
+
+            .cell-xs-5.cell-sm-33.cell-md-25
+              +vip({
+                img: 'diagnostics-04-268x216',
+                title: 'Dr. Max Turner',
+                cite: 'Cardiology'
+              })
+
+            .cell-xs-5.cell-sm-33.cell-md-25
+              +vip({
+                img: 'diagnostics-05-268x216',
+                title: 'Dr. Peter Wilson',
+                cite: 'Traumatology'
+              })
+
+            .cell-xs-5.cell-sm-33.cell-md-25
+              +vip({
+                img: 'diagnostics-06-268x216',
+                title: 'Dr. Jason Clark',
+                cite: 'Head Doctor, Neurology'
+              })
+
+            .cell-xs-5.cell-sm-33.cell-md-25
+              +vip({
+                img: 'diagnostics-07-268x216',
+                title: 'Dr. Helen Wilson',
+                cite: 'Diagnostics'
+              })
+
+            .cell-xs-5.cell-sm-33.cell-md-25
+              +vip({
+                img: 'diagnostics-08-268x216',
+                title: 'Dr. Sam Smith',
+                cite: 'Dentistry'
+              })
+
+
+
+        .cell-lg-2
+          .aside-info
+            .aside-info-item
+              h4 Departments
+              ul
+                li: a(href='#') Neurology
+                li: a(href='#') Traumatology
+                li: a(href='#') Dentistry
+                li: a(href='#') Cardiology
+                li: a(href='#') Pulmonary
+                li: a(href='#') Pediatrics
+                li: a(href='#') ophtalmology
+                li: a(href='diagnostics.html') Diagnostics
+            .aside-info-item.aside-info-item-table
+              h4 Opening Hours
+              div
+                dl
+                  dt Weekdays
+                  dd 8.00 – 17.00
+                dl
+                  dt Saturday
+                  dd 9.30 – 17.30
+                dl
+                  dt Sunday
+                  dd 9.30 – 15.00
+
+  // Page Footer
+  include ../sections/_footer-default

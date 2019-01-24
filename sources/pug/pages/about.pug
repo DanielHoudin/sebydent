@@ -1,0 +1,173 @@
+extends  ../_skeleton
+
+//- Includes
+include  ../elements/_block-componentz
+
+block variables
+  - var activeCategory = 'About'
+
+block title
+  title About Us
+
+block page
+  // Page Header
+  include ../sections/_header-default 
+
+  // About Us
+  +breadcrumb-classic('images/bg-12.jpg', 'About Us',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "About Us"
+    }
+  }
+  )
+
+  // Why choose us
+  section.section.section-lg.bg-white
+    .shell
+      .range.range-md-middle.range-30
+        .cell-md-6
+          .image-skew(style='max-width: 803px;')
+            .image-skew-inner
+              .image-skew-inner-img
+                +jpg('about-02-803x458')
+        .cell-md-4
+          h2.heading-with-aside-divider About Clinic
+            span.divider
+          p The Medical private medical clinic specializes in a wide variety of health issues, related to absolutely any age or severity level. Our seasoned team of highly trained physicians and practical nurses will be glad to help you 24/7!
+          .range.range-40.range-lg-50.range-lg
+            .cell-xs-5
+              .icon-unit
+                .icon-unit-left
+                  +png('icon-01-34x52')
+                .icon-unit-body
+                  h5 Qualified Doctors
+                  p 25 years of experience
+            .cell-xs-5
+              .icon-unit
+                .icon-unit-left
+                  +png('icon-02-33x52')
+                .icon-unit-body
+                  h5 Modern Equipment
+                  p Branded and time tested
+            .cell-xs-5
+              .icon-unit
+                .icon-unit-left
+                  +png('icon-03-39x39')
+                .icon-unit-body
+                  h5 Emergency Help
+                  p Get help any time of the day
+            .cell-xs-5
+              .icon-unit
+                .icon-unit-left
+                  +png('icon-04-36x43')
+                .icon-unit-body
+                  h5 Individual Approach
+                  p Each case is always special
+
+
+  section.section.bg-gray-bright.section-xs.section-counter.context-dark.text-center
+    .section-counter-decoration
+    .section-counter-decoration
+    .shell
+      .range.range-xs-center.range-30
+        .cell-xs-5.cell-md-2
+          .counter-wrap
+            .heading-1
+              span.counter(data-step='3000') 10
+            p.small YEARS OF EXPERIENCE
+        .cell-xs-5.cell-md-2
+          .counter-wrap
+            .heading-1
+              span.counter-preffix 0
+              span.counter(data-speed='2500') 7
+            p.small expert doctors
+        .cell-xs-5.cell-md-2
+          .counter-wrap
+            .heading-1
+              span.counter(data-step='1500') 26
+            p.small departments
+        .cell-xs-5.cell-md-2
+          .counter-wrap
+            .heading-1
+              span.counter-preffix
+              span.counter(data-speed='1300') 12
+            p.small medical services
+
+  // Our Doctors
+  section.section.section-lg.bg-white
+    .shell
+      .range.range-30
+        .cell-lg-8
+          .box
+            .box-left
+              h2 Our Doctors
+            .box-right
+              .owl-outer-navigation#owl-carousel-nav
+                .owl-arrow.owl-arrow-prev.fl-budicons-free-left161
+                .owl-arrow.owl-arrow-next.fl-budicons-free-right163
+              a.button.button-albus.button-effect-ujarak(href='timetable.html')  View TimeTable
+
+          .divider-default
+          .owl-carousel(data-items='1', data-xs-items='2' data-sm-items='3' data-md-items='4' data-lg-items='4' data-stage-padding='0', data-loop='true', data-margin='30', data-mouse-drag="false" data-nav-custom="#owl-carousel-nav")
+            .item
+              +vip({
+                img: 'diagnostics-01-268x216',
+                title: 'Dr. Julia Jameson',
+                cite: 'Pediatrics'
+              })
+            .item
+              +vip({
+                img: 'diagnostics-02-268x216',
+                title: 'Dr. Rodney Stratton',
+                cite: 'Pulmonary'
+              })
+            .item
+              +vip({
+                img: 'diagnostics-03-268x216',
+                title: 'Dr. Amy Adams',
+                cite: 'Ophthalmology'
+              })
+            .item
+              +vip({
+                img: 'diagnostics-04-268x216',
+                title: 'Dr. Jason Clark',
+                cite: 'Cardiology'
+              })
+            .item
+              +vip({
+                img: 'diagnostics-05-268x216',
+                title: 'Dr. Peter Wilson ',
+                cite: 'Traumatology'
+              })
+
+            .item
+              +vip({
+                img: 'diagnostics-06-268x216',
+                title: 'Dr. Max Turner',
+                cite: 'Neurology'
+              })
+
+            .item
+              +vip({
+                img: 'diagnostics-07-268x216',
+                title: 'Dr. Helen Wilson',
+                cite: 'Diagnostics'
+              })
+
+            .item
+              +vip({
+                img: 'diagnostics-08-268x216',
+                title: 'Dr. Sam Lee ',
+                cite: 'Dentistry'
+              })
+
+        .cell-lg-2.text-center.text-xs-left
+          a(href='contacts.html'): +jpg('about-02-268x483')
+
+  // Page Footer
+  include ../sections/_footer-default

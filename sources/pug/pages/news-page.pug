@@ -1,0 +1,232 @@
+extends  ../_skeleton
+
+block variables
+  - var activeCategory = 'Pages'
+
+block title
+  title Blog Post
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  // Blog Post
+  +breadcrumb-classic('images/bg-07.jpg', 'Blog Post',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "Blog Post"
+    }
+  }
+  )
+
+  section.section.section-lg.bg-white.text-left
+    .shell
+      .range.range-40
+        .cell-md-6.cell-lg-7
+          .object
+            .object-left
+              .image-skew
+                .image-skew-inner
+                  .image-skew-inner-img
+                    +jpg('blog-post-01-599x458')
+            .object-right
+              h2 Our Definitive Guide to Cold and Flu
+              p So you’ve come down with a nasty bug that’s been making the rounds.
+              p If you think you have an upper respiratory infection (URI) — which includes the common cold, sinus infections, chest colds (bronchitis) — there’s a lot you can do at home to feel better faster.
+
+          .block-text-width-divider
+            .block-text-width-divider-content
+              p You’ll have infections like these many times throughout your life, so learning what helps the most (and the least) is worth your time. What to Expect with an Upper Respiratory Infection?
+              p More than 90 percent of upper respiratory infections are caused by viruses. These infections create different symptoms at each stage. Most colds and flus go away in about a week, although some symptoms (like coughing) can take two or three weeks to go away completely.
+
+              .quote-demo
+                h4.quote-demo-title “Taking one to two grams a day of vitamin C during cold season can lessen the severity and duration of your colds“
+
+              p.text-spacing-0 Your immune system’s job is to eradicate viral and bacterial infections from your body. It’s very effective as long as you provide it with the proper support. The best way to do that is to rest. Being stressed out or not getting enough sleep releases hormones that suppress your immune system.
+
+              .single-post-meta
+                .single-post-meta-item
+                  ul.list-inline.list-inline-lg
+                    li
+                      .object-inline.text-spacing-0.text-gray-darker
+                        span.icon.icon-xs.icon-primary.mdi-clock
+                        span February 10, 2018
+                    li
+                      .object-inline.text-spacing-0.text-gray-darker
+                        span.icon.icon-xs.icon-primary.mdi-thumb-up-outline
+                        span 23
+                    li
+                      .object-inline.text-spacing-0.text-gray-darker
+                        span.icon.icon-xs.icon-primary.mdi-message-outline
+                        span 3
+                .single-post-meta-item
+                  ul.list-inline.text-spacing-0.text-gray-darker
+                    li Share this post
+                    li: a.icon.icon-gray-darker.fa-facebook(href='#')
+                    li: a.icon.icon-gray-darker.fa-twitter(href='#')
+                    li: a.icon.icon-gray-darker.fa-google-plus(href='#')
+                    li: a.icon.icon-gray-darker.fa-pinterest-p(href='#')
+
+          .comment-wrap
+            .comment-wrap-title.heading-4: span 3 comments
+
+            // Comment 1st level
+            .comment
+              .comment-inner
+                .comment-left
+                  +jpg('blog-post-01-65x65', 'img-circle')
+                .comment-body
+                  .comment-body-header
+                    .comment-name edward
+                    .comment-time 3 day ago
+                  .comment-body-content
+                    p.text-spacing-50 The best way to avoid contracting influenza or cold is to keep yourself warm and drink plenty of fluids. Liquids like tea can also reduce mucus thickness. You can also use a humidifier at home as warm moist air causes the bronchial tubes to relax and it loosens up mucus, however, care should be taken to clean out the humidifier regularly to avoid bacteria or fungi propagating in it.
+                    ul.list-inline.list-inline-lg
+                      li
+                        .object-inline.object-inline-lg
+                          span.icon.mdi-thumb-up-outline
+                          a.text-spacing-80.text-gray-darker.text-bold(href='#') 32
+                      li
+                        .object-inline.object-inline-lg.text-spacing-0
+                          span.icon.mdi-comment-outline
+                          a.text-gray-darker.text-bold(href='#') Reply
+
+                    // Comment 2st level
+                    .comment
+                      .comment-inner
+                        .comment-left
+                          +jpg('blog-post-02-60x60', 'img-circle')
+                        .comment-body
+                          .comment-body-header
+                            .comment-name nina
+                            .comment-time 1 days ago
+                          .comment-body-content
+                            p.text-spacing-50 Thank you for your opinion! I'm glad that you found this article interesting, and I hope to continue this topic in further publications. Don’t hesitate and visit our site for more useful information related to all diseases.
+                            ul.list-inline.list-inline-lg
+                              li
+                                .object-inline.object-inline-lg
+                                  span.icon.mdi-thumb-up-outline
+                                  a.text-spacing-80.text-gray-darker.text-bold(href='#') 32
+                              li
+                                .object-inline.object-inline-lg.text-spacing-0
+                                  span.icon.mdi-comment-outline
+                                  a.text-gray-darker.text-bold(href='#') Reply
+
+            // Comment 1st level
+            .comment
+              .comment-inner
+                .comment-left
+                  +jpg('blog-post-03-65x65', 'img-circle')
+                .comment-body
+                  .comment-body-header
+                    .comment-name john
+                    .comment-time 3 days ago
+                  .comment-body-content
+                    p.text-spacing-50 Still, there are some other natural foods for bronchitis treatment like: honey has antiviral as well as antibacterial properties and eating a tablespoon daily be useful to treat bronchitis as it helps soothes the throat and build an strong immune system. Oregano oil and salt water tends to lessen throat soreness and a few drops of oregano oil or gargling salt water are enough to cure severe or uneasy breathing.
+                    ul.list-inline.list-inline-lg
+                      li
+                        .object-inline.object-inline-lg
+                          span.icon.mdi-thumb-up-outline
+                          a.text-spacing-80.text-gray-darker.text-bold(href='#') 32
+                      li
+                        .object-inline.object-inline-lg.text-spacing-0
+                          span.icon.mdi-comment-outline
+                          a.text-gray-darker.text-bold(href='#') Reply
+
+            // Comment 1st level
+            .comment
+              .comment-inner()
+                .comment-left
+                  +jpg('blog-post-04-65x65', 'img-circle')
+                .comment-body(style='width: 100%')
+                  .comment-body-header
+                    .comment-name Miranda
+                  .comment-body-content
+                    form.rd-mailform(data-form-output='form-output-global', data-form-type='contact', method='post')
+                      .form-wrap.form-wrap-validation
+                        label.form-label(for='forms-2-message') Your comment
+                        textarea#forms-2-message.form-input(name='message', data-constraints='@Required')
+                      .form-button
+                        button.button.button-effect-ujarak.button-primary(type='submit') Submit
+
+
+
+
+
+
+        .cell-md-4.cell-lg-3
+          .blog-aside
+            .range.range-40.range-lg-60
+              .cell-md-10.blog-aside-item
+                .rd-navbar-search
+                  form.rd-search(action="search-results.html" data-search-live="rd-search-results-live" method="GET")
+                    div.form-wrap
+                      label.form-label(for="rd-search-form-input" class="form-label") Search the blog…
+                      input(class="rd-navbar-search-form-input form-input" id="rd-search-form-input" type="text" name="s" autocomplete="off")
+                      button.rd-search-form-submit.fl-bigmug-line-search74
+
+              .cell-md-10.blog-aside-item
+                .blog-aside-item-inner
+                  h4.text-center Latest Posts
+
+                  .post-minimal-wrap
+                    a.post-minimal(href='#')
+                      .unit.unit-spacing-xs.unit-horizontal
+                        .unit-left
+                          +jpg('post-01-92x78')
+                        .unit-body
+                          p The Importance of Regular Eye Examinations
+                            span Feb 4, 2018 / 1 Comment
+
+                    a.post-minimal(href='#')
+                      .unit.unit-spacing-xs.unit-horizontal
+                        .unit-left
+                          +jpg('post-02-92x78')
+                        .unit-body
+                          p Helping Children Deal With Trauma
+                            span Feb 4, 2018 / 1 Comment
+
+                    a.post-minimal(href='#')
+                      .unit.unit-spacing-xs.unit-horizontal
+                        .unit-left
+                          +jpg('post-03-92x78')
+                        .unit-body
+                          p Top 5 Medical Technology Innovations
+                            span Feb 4, 2018 / 1 Comment
+
+              .cell-sm-5.cell-md-10.blog-aside-item.text-center
+                .blog-aside-item-inner
+                  h4 Newsletter
+                  p(style='margin-left: -2px; margin-right: -2px') Enter your e-mail to get the latest news
+                  form.rd-mailform(data-form-output='form-output-global', data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+                    .form-wrap
+                      label.form-label(for='newsletter-email') Your e-mail address...
+                      input#newsletter-email.form-input(type='email', name='email', data-constraints='@Email @Required')
+                    button.button.button-effect-ujarak.button-primary.button-block(type='submit') subscribe
+
+              .cell-sm-5.cell-md-10.blog-aside-item.text-center
+                .blog-aside-item-inner
+                  h4 Tags
+                  .tag-list
+                    a.tag(href='#') help
+                    a.tag(href='#') doctor
+                    a.tag(href='#') medicine
+                    a.tag(href='#') dental
+                    a.tag(href='#') patient
+                    a.tag(href='#') oral
+
+
+
+
+
+
+  // Page Footer
+  include ../sections/_footer-default

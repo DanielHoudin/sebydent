@@ -1,0 +1,421 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_news
+
+block variables
+	- var activeCategory = 'Home'
+
+block title
+	title Home
+
+block page
+	// Page Header
+	include ../sections/_header-default
+
+	// Swiper
+
+	section.swiper-main-wrap.wow.fadeIn
+		.swiper-container.swiper-slider(data-index-bullet="true" data-clickable='true' data-custom-pagination='#swiper-pagination-index' data-slide-effect='fade' data-autoplay='4000' data-simulate-touch="false")
+			.swiper-wrapper
+				.swiper-slide(data-slide-bg='images/slide-01.jpg')
+					.swiper-slide-caption
+						.parallax-container.parallax-container-modern(data-parallax-img='')
+							.parallax-content.section-lg
+								p.heading-4.heading-divider-modern(data-caption-animate='fadeInUp' data-caption-delay='250' style='font-weight: 400') Individual approach to each patient
+								h1(data-caption-animate='fadeInUp' data-caption-delay='100') Health Service
+								a(href=config.contactLink data-caption-animate='fadeInUp' data-caption-delay='450').button.button-white.button-effect-ujarak make an Appointment
+				.swiper-slide(data-slide-bg='images/slide-02.jpg')
+					.swiper-slide-caption
+						.parallax-container.parallax-container-modern(data-parallax-img='')
+							.parallax-content.section-lg
+								p.heading-4.heading-divider-modern(data-caption-animate='fadeInUp' data-caption-delay='250' style='font-weight: 400') Committed to excellent and complete patient care
+								h1(data-caption-animate='fadeInUp' data-caption-delay='100') Health Clinic
+								a(href=config.contactLink data-caption-animate='fadeInUp' data-caption-delay='450').button.button-white.button-effect-ujarak make an Appointment
+				.swiper-slide(data-slide-bg='images/slide-03.jpg')
+					.swiper-slide-caption
+						.parallax-container.parallax-container-modern(data-parallax-img='')
+							.parallax-content.section-lg
+								p.heading-4.heading-divider-modern(data-caption-animate='fadeInUp' data-caption-delay='250' style='font-weight: 400') A range of programs for women’s healthcare
+								h1(data-caption-animate='fadeInUp' data-caption-delay='100') Special Touch
+								a(href=config.contactLink data-caption-animate='fadeInUp' data-caption-delay='450').button.button-white.button-effect-ujarak make an Appointment
+
+		.swiper-main-list-wrap
+			ul.swiper-main-list
+				li: a.icon.fa-facebook.icon-white-lighter-block(href='#')
+				li: a.icon.fa-twitter.icon-white-lighter-block(href='#')
+				li: a.icon.icon-xxs.fa-google-plus.icon-white-lighter-block(href='#')
+
+		.swiper-pagination.swiper-pagination-index#swiper-pagination-index
+
+	// Opening Hours
+	section.section.section-lg.bg-white.wow.fadeIn
+		.shell
+			.range.range-30
+				.cell-sm-5.cell-lg-3.reveal-sm-flex
+					.block-modern.block-modern-1.wow.fadeIn(data-wow-delay=".1s")
+						.block-modern-title
+							h4 Opening Hours
+						.work-info
+							div
+								dl
+									dt Monday
+									dd 8.00 – 17.00
+								dl
+									dt Saturday
+									dd 9.30 – 17.30
+								dl
+									dt Sunday
+									dd 9.30 – 15.00
+
+				.cell-sm-5.cell-lg-3.reveal-sm-flex
+					.block-modern.block-modern-2.wow.fadeIn(data-wow-delay=".3s")
+						.block-modern-title
+							h4 Doctors’ Timetable
+						p View a timetable showing when our doctors are usually available.
+						a.button.button-albus.button-effect-ujarak(href='timetable.html')  View TimeTable
+
+
+				.cell-lg-4.reveal-md-flex
+					.block-modern.block-modern-3.wow.fadeIn(data-wow-delay=".5s")
+						.block-modern-title
+							h4 Make an Appointment
+						form.rd-mailform(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php')
+							.range.range-xs-center.range-20.range-narrow
+								.cell-sm-5
+									.form-wrap.form-wrap-validation
+										select.form-input.select-filter(data-style='modern' data-placeholder="Select a Department", data-minimum-results-for-search="Infinity", data-constraints="@Required")
+											option(label="placeholder")
+											option(value="2") Neurology
+											option(value="3") Dentistry
+											option(value="4") Cardiology
+											option(value="5") Pediatrics
+											option(value="6") Pulmonology
+											option(value="7") Ophthalmology
+											option(value="8") Diagnostics
+
+										span.select-arrow
+
+								.cell-sm-5
+									.form-wrap.form-wrap-validation
+										label.form-label(for='forms-phone') Phone
+										input#forms-phone.form-input(type='text', name='phone', data-constraints='@Numeric @Required')
+
+
+								.cell-sm-5
+									.form-wrap.form-wrap-validation
+										label.form-label(for='forms-email') E-mail
+										input#forms-email.form-input(type='email', name='email', data-constraints='@Email @Required')
+								.cell-sm-5
+									.form-button
+										button.button.button-effect-ujarak.button-albus.button-block.button-square(type='submit') make an Appointment
+
+
+	// About Clinic
+	section.section.section-lg.bg-white.wow.fadeIn
+		.shell
+			.range.range-md-middle.range-30
+				.cell-md-6.wow.fadeIn(data-wow-delay=".3s")
+					.image-skew(style='max-width: 803px;')
+						.image-skew-inner
+							.image-skew-inner-img
+								+jpg('careers-01-803x458')
+				.cell-md-4
+					h2.heading-with-aside-divider.wow.fadeInUp(data-wow-delay=".1s") About Clinic
+						span.divider
+					p.wow.fadeInUp(data-wow-delay=".3s") The Health private medical clinic specializes in a wide variety of health issues, related to absolutely any age or severity level. Our seasoned team of highly trained physicians and practical nurses will be glad to help you 24/7!
+					.range.range-40.range-lg-50.range-lg
+						.cell-xs-5
+							.icon-unit.wow.fadeInUp(data-wow-delay=".7s")
+								.icon-unit-left
+									+png('icon-01-34x52')
+								.icon-unit-body
+									h5 Qualified Doctors
+									p 25 years of experience
+						.cell-xs-5
+							.icon-unit.wow.fadeInUp(data-wow-delay=".75s")
+								.icon-unit-left
+									+png('icon-02-33x52')
+								.icon-unit-body
+									h5 Modern Equipment
+									p Branded and time tested
+						.cell-xs-5
+							.icon-unit.wow.fadeInUp(data-wow-delay=".8s")
+								.icon-unit-left
+									+png('icon-03-39x39')
+								.icon-unit-body
+									h5 Emergency Help
+									p Get help anytime
+						.cell-xs-5
+							.icon-unit.wow.fadeInUp(data-wow-delay=".85s")
+								.icon-unit-left
+									+png('icon-04-36x43')
+								.icon-unit-body
+									h5 Individual Approach
+									p Each case is always special
+
+	section.section.bg-gray-bright.section-xs.section-counter.context-dark.text-center
+		.section-counter-decoration
+		.section-counter-decoration
+		.shell
+			.range.range-xs-center.range-30
+				.cell-xs-5.cell-md-2
+					.counter-wrap
+						.heading-1
+							span.counter(data-step='3000') 10
+						p.small YEARS OF EXPERIENCE
+				.cell-xs-5.cell-md-2
+					.counter-wrap
+						.heading-1
+							span.counter-preffix 0
+							span.counter(data-speed='2500') 7
+						p.small expert doctors
+				.cell-xs-5.cell-md-2
+					.counter-wrap
+						.heading-1
+							span.counter(data-step='1500') 26
+						p.small departments
+				.cell-xs-5.cell-md-2
+					.counter-wrap
+						.heading-1
+							span.counter-preffix
+							span.counter(data-speed='1300') 12
+						p.small medical services
+
+	// Departaments
+	section.section.section-lg.bg-white.wow.fadeIn
+		.shell
+			.range
+				.cell-xs-10
+					.box
+						.box-left
+							h2 Departments
+						.box-right
+							.owl-outer-navigation#owl-carousel-nav
+								.owl-arrow.owl-arrow-prev.fl-budicons-free-left161
+								.owl-arrow.owl-arrow-next.fl-budicons-free-right163
+							a.button.button-albus.button-effect-ujarak(href='departments.html')  All departments
+
+					.divider-default
+
+					.owl-carousel(data-items='1', data-sm-items='2' data-md-items='3' data-lg-items='5' data-stage-padding='0', data-loop='true', data-margin='30', data-mouse-drag="false" data-nav-custom="#owl-carousel-nav"  data-autoplay='true')
+						.item.wow.fadeInRight(data-wow-delay=".1s")
+							a.block-accent(href='#')
+								.block-accent-inner
+									include ../elements/svg-icons/_icon-neurology
+									h4.block-accent-title Neurology
+						.item.wow.fadeInRight(data-wow-delay=".3s")
+							a.block-accent(href='#')
+								.block-accent-inner
+									include ../elements/svg-icons/_icon-traumatology
+									h4.block-accent-title Traumatology
+						.item.wow.fadeInRight(data-wow-delay=".5s")
+							a.block-accent(href='#')
+								.block-accent-inner
+									include ../elements/svg-icons/_icon-cardiology
+									h4.block-accent-title Cardiology
+						.item.wow.fadeInRight(data-wow-delay=".7s")
+							a.block-accent(href='#')
+								.block-accent-inner
+									include ../elements/svg-icons/_icon-dentistry
+									h4.block-accent-title Dentistry
+						.item.wow.fadeInRight(data-wow-delay=".9s")
+							a.block-accent(href='#')
+								.block-accent-inner
+									include ../elements/svg-icons/_icon-pulmonary
+									h4.block-accent-title Pulmonary
+						.item
+							a.block-accent(href='#')
+								.block-accent-inner
+									include ../elements/svg-icons/_icon-pediatric
+									h4.block-accent-title Pediatric
+						.item
+							a.block-accent(href='#')
+								.block-accent-inner
+									include ../elements/svg-icons/_icon-ophthalmology
+									h4.block-accent-title Ophthalmology
+
+	// Our Doctors
+	section.section.section-lg.bg-white.wow.fadeIn
+		.shell
+			.range
+				.cell-xs-10
+					.box
+						.box-left
+							h2 Our Doctors
+						.box-right
+							a.button.button-albus.button-effect-ujarak(href='our-doctors.html')  View all doctors
+
+					.divider-default
+
+					.range.range-30
+						.cell-sm-10.cell-lg-4.reveal-lg-flex
+							.block-disclosure.block-disclosure-xl.wow.fadeIn(data-wow-delay=".6s")
+								.block-disclosure-left
+									+jpg('doctor-04-151x203')
+								.block-disclosure-body
+									p.block-disclosure-cite Head Doctor, Neurology
+									h5.block-disclosure-title: a(href='doctor-profile.html') Dr. Richard Molloy
+									p.block-disclosure-info 20 years of experience
+									.block-disclosure-divider
+									.block-disclosure-link
+										span.icon.icon-md.icon-primary.mdi-phone
+										a(href='tel:#') +1 (409) 987–5874
+									.block-disclosure-quote
+										svg(width='66px', height='47px')
+											defs
+												filter
+													feflood(flood-color='rgb(202, 214, 227)', flood-opacity='1', result='floodOut')
+											g
+												path(fill-rule='evenodd', d='M30.178,32.626 C30.178,36.717 28.692,40.139 25.720,42.891 C22.753,45.634 19.242,47.011 15.191,47.011 C11.146,47.011 7.601,45.634 4.558,42.891 C1.521,40.139 0.006,36.842 0.006,33.012 C0.006,29.171 1.829,24.504 5.472,19.002 L17.623,0.013 L29.371,0.013 L21.875,19.967 C27.410,22.392 30.178,26.616 30.178,32.626 ZM65.989,32.626 C65.989,36.717 64.503,40.139 61.531,42.891 C58.564,45.634 55.053,47.011 51.000,47.011 C46.951,47.011 43.407,45.634 40.369,42.891 C37.332,40.139 35.812,36.842 35.812,33.012 C35.812,29.171 37.641,24.504 41.281,19.002 L53.434,0.013 L65.174,0.013 L57.686,19.967 C63.218,22.392 65.989,26.616 65.989,32.626 Z')
+										p I am a dedicated doctor trained in diagnosing and treating disorders and diseases of the brain, spinal cord, nerves and muscles.
+
+						.cell-sm-5.cell-lg-3
+							.block-disclosure.wow.fadeIn(data-wow-delay=".1s")
+								.block-disclosure-left
+									+jpg('doctor-05-151x203')
+								.block-disclosure-body
+									p.block-disclosure-cite Pediatrics
+									h5.block-disclosure-title: a(href='doctor-profile.html') Dr. Julia Jameson
+									p.block-disclosure-info 9 years of experience
+									.block-disclosure-divider
+									.block-disclosure-link
+										span.icon.icon-md.icon-primary.mdi-phone
+										a(href='tel:#') +1 (409) 987–5874
+
+							.block-disclosure.wow.fadeIn(data-wow-delay=".2s")
+								.block-disclosure-left
+									+jpg('doctor-03-151x203')
+								.block-disclosure-body
+									p.block-disclosure-cite Pulmonary
+									h5.block-disclosure-title: a(href='doctor-profile.html') Dr. Rodney Stratton
+									p.block-disclosure-info 16 years of experience
+									.block-disclosure-divider
+									.block-disclosure-link
+										span.icon.icon-md.icon-primary.mdi-phone
+										a(href='tel:#') +1 (409) 987–5874
+
+						.cell-sm-5.cell-lg-3
+							.block-disclosure.wow.fadeIn(data-wow-delay=".3s")
+								.block-disclosure-left
+									+jpg('doctor-01-262x440')
+								.block-disclosure-body
+									p.block-disclosure-cite Cardiology
+									h5.block-disclosure-title: a(href='doctor-profile.html') Dr. Max Turner
+									p.block-disclosure-info 10 years of experience
+									.block-disclosure-divider
+									.block-disclosure-link
+										span.icon.icon-md.icon-primary.mdi-phone
+										a(href='tel:#') +1 (409) 987–5874
+
+							.block-disclosure.wow.fadeIn(data-wow-delay=".4s")
+								.block-disclosure-left
+									+jpg('doctor-02-151x203')
+								.block-disclosure-body
+									p.block-disclosure-cite Ophthalmology
+									h5.block-disclosure-title: a(href='doctor-profile.html') Dr. Amy Adams
+									p.block-disclosure-info 6 years of experience
+									.block-disclosure-divider
+									.block-disclosure-link
+										span.icon.icon-md.icon-primary.mdi-phone
+										a(href='tel:#') +1 (409) 987–5874
+
+
+	section.section.text-center.section-lg.bg-white
+		.parallax-container.parallax-container-modern(data-parallax-img='images/bg-14.jpg')
+			.parallax-content.section-lg.context-dark
+				.shell
+					.range.range-xs-center
+						.cell-sm-8.cell-lg-8.cell-xl-6
+							h2 What Our Clients Say
+							.owl-carousel-wrap
+								.owl-carousel(data-items='1' data-stage-padding='0', data-loop='false', data-autoplay='true' data-margin='30', data-mouse-drag="false" data-animation-in='fadeIn' data-dots-custom="#owl-pagination-custom" data-nav-custom="#owl-carousel-nav-0")
+									.item
+										.quote-testimonial-style-2
+											p.quote-testimonial-style-2-title This Health Centre is a great place to get all of your medical needs. I came in for a check up and did not wait more than 5 minutes before I was seen. I can only imagine the type of service you get for more serious issues. Thanks!
+											.quote-testimonial-style-2-divider
+											p.quote-testimonial-style-2-cite Max Winchester
+									.item
+										.quote-testimonial-style-2
+											p.quote-testimonial-style-2-title I got a recommendation today at this place, and I was amazed by their business. I was seen by Dr. Adams. She was very nice and especially very knowledgeable. I would definitely recommend this place to everyone I know.
+											.quote-testimonial-style-2-divider
+											p.quote-testimonial-style-2-cite Jane Anderson
+									.item
+										.quote-testimonial-style-2
+											p.quote-testimonial-style-2-title I’ve been coming here for about 2 years and my biggest compliment of this place is its efficiency. With an appt, I’ve usually been in and out of this place within 30 minutes. The facility is clean, the staff is friendly, good work!
+											.quote-testimonial-style-2-divider
+											p.quote-testimonial-style-2-cite Tom Brown
+									.item
+										.quote-testimonial-style-2
+											p.quote-testimonial-style-2-title Got a prescription here from Dr. Adams a week ago and I am very pleased. I thought it took longer but wait time was low. My consultation went well and the price was a lot lower than my old doctor. I think I will be coming back if needed.
+											.quote-testimonial-style-2-divider
+											p.quote-testimonial-style-2-cite Emily Watson
+
+								.owl-outer-navigation#owl-carousel-nav-0
+									.owl-arrow.owl-arrow-prev.fl-budicons-free-left161
+									.owl-arrow.owl-arrow-next.fl-budicons-free-right163
+
+								#owl-pagination-custom
+									.owl-dot-custom(data-owl-item='0'): +jpg('testimonials-01-79x79', 'img-circle')
+									.owl-dot-custom(data-owl-item='1'): +jpg('testimonials-02-79x79', 'img-circle')
+									.owl-dot-custom(data-owl-item='2'): +jpg('testimonials-03-79x79', 'img-circle')
+									.owl-dot-custom(data-owl-item='3'): +jpg('testimonials-04-79x79', 'img-circle')
+
+
+
+	// Latest News
+	section.section.section-lg.bg-white.wow.fadeIn
+		.shell
+			.range
+				.cell-xs-10
+					.box
+						.box-left
+							h2 Latest News
+
+						.box-right
+							.owl-outer-navigation#owl-carousel-nav-1
+								.owl-arrow.owl-arrow-prev.fl-budicons-free-left161
+								.owl-arrow.owl-arrow-next.fl-budicons-free-right163
+
+
+					.divider-default
+
+					.owl-carousel(data-items='1', data-md-items='2' data-stage-padding='0', data-loop='true' data-autoplay='true' data-margin='30', data-mouse-drag="false" data-nav-custom="#owl-carousel-nav-1")
+						.item.wow.fadeIn(data-wow-delay=".1s")
+							+post({
+								'img': 'news-01-719x246',
+								'title': 'Helping Children Deal With Trauma',
+								'date': 'January 22, 2018',
+								'author': 'Amelia Condon',
+								'comments': '2'
+							})
+
+						.item.wow.fadeIn(data-wow-delay=".2s")
+							+post({
+								'img': 'news-02-719x246',
+								'title': 'Do You Know the ABCs of Health Care?',
+								'date': 'January 22, 2018',
+								'author': 'Amelia Condon',
+								'comments': '2'
+							})
+
+						.item
+							+post({
+								'img': 'news-03-719x246',
+								'title': 'Stress at Work – How to Reduce?',
+								'date': 'January 22, 2018',
+								'author': 'Amelia Condon',
+								'comments': '2'
+							})
+
+						.item
+							+post({
+								'img': 'news-04-719x246',
+								'title': 'Top 5 Health Technology Innovations',
+								'date': 'January 22, 2018',
+								'author': 'Amelia Condon',
+								'comments': '2'
+							})
+
+	// Page Footer
+	include ../sections/_footer-default

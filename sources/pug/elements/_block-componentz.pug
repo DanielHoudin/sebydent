@@ -1,0 +1,22 @@
+
+mixin vip(obj)
+	.vip
+		.vip-image-block
+			+jpg(obj.img)
+		.vip-content
+			h5: a(href='doctor-profile.html')= obj.title
+			.vip-cite: span= obj.cite
+			.vip-divider
+			.vip-link
+				span.icon.icon-md.icon-primary.mdi-phone
+				a(href='tel:#') +1 (409) 987–5874
+mixin vip-custom(obj)
+	.vip
+		+jpg(obj.img)
+		.vip-content
+			.vip-cite: span= obj.cite
+			h5: a(href='doctor-profile.html')= obj.title
+			.vip-divider
+			.vip-link
+				span.icon.icon-md.icon-primary.mdi-phone
+				a(href='tel:#') +1 (409) 987–5874

@@ -1,0 +1,61 @@
+extends  ../_skeleton
+
+block variables
+  - var activeCategory = 'Pages'
+
+block title
+  title Clients
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  // Clients
+  +breadcrumb-classic('images/bg-09.jpg', 'Clients',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "Clients"
+    }
+  }
+  )
+
+  // Why choose us
+  section.section.section-lg.bg-white
+    .shell.bg-white-lighter.block-info-wrap
+      .block-info-wrap-inner
+        .block-info-wrap-item
+          .block-info
+            .block-info-inner
+              +jpg('clients-01-91x91', 'img-circle')
+              p This Medical Centre is a great place to get all of your medical needs. I came in for a check up and did not wait more than 5 minutes before I was seen. I can only imagine the type of service you get for more serious issues. Thanks!
+              p.heading-5 Paul Adams
+        .block-info-wrap-item
+          .block-info
+            .block-info-inner
+              +jpg('clients-02-91x91', 'img-circle')
+              p I’ve been coming here for about 2 years and my biggest compliment of this place is its efficiency. With an appt, I’ve usually been in and out of this place within 30 minutes. The facility is clean, the staff is friendly, good work!
+              p.heading-5 Thomas Lee
+        .block-info-wrap-item
+          .block-info
+            .block-info-inner
+              +jpg('clients-03-91x91', 'img-circle')
+              p Got a prescription here from Dr. Adams a week ago and I am very pleased. I thought it took longer but wait time was low. My consultation went well and the price was a lot lower than my old doctor. I think I will come back if needed.
+              p.heading-5 Emily Watson
+        .block-info-wrap-item
+          .block-info
+            .block-info-inner
+              +jpg('clients-04-91x91', 'img-circle')
+              p I wanted to send enormous thanks for the caring service. It was discreet, diverse and helped me in ways I wasn’t expecting. I was very lucky to have been treated by you. Thank you very much!
+              p.heading-5 Jane Anderson
+
+
+  // Page Footer
+  include ../sections/_footer-default

@@ -1,0 +1,139 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-progress-bar-linear
+include ../elements/_ui-counter
+
+block variables
+  - var activeCategory = 'Pages'
+
+block title
+  title Progress Bars
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  // Breadcrumbs
+  +breadcrumb-classic('images/bg-01.jpg', 'Progress Bars, Skill Bars, Countes',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Additional Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "Progress Bars"
+    }
+  }
+  )
+
+  // Skill Bars
+  section.section.section-lg.bg-white
+    .shell
+      .block-lg.text-center
+        h3 Progress Bars, Skill Bars, Counters
+        p.large These elements are vital to every website’s design, and with them you are able to improve the overall look of your resource and attract more clients.
+
+      .range.range-xs-center.range-20
+        .cell-md-4
+          div()
+            +progress-bar-linear({
+              title: "Dedication",
+              valueTo: "75"
+            })
+
+            +progress-bar-linear({
+              title: "Knowledge",
+              valueTo: "85"
+            })
+
+            +progress-bar-linear({
+              title: "Professionalism",
+              valueTo: "80"
+            })
+
+
+        .cell-md-4
+          .block-preffix
+            h4 Welcome to Our Website
+            p.offset Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+
+  // Counters
+  section.section.bg-gray-bright.section-xs.section-counter.context-dark.text-center
+    .section-counter-decoration
+    .section-counter-decoration
+    .shell
+      .range.range-xs-center.range-30
+        .cell-xs-5.cell-md-2
+          .counter-wrap
+            .heading-1
+              span.counter(data-step='3000') 10
+            p.small YEARS OF EXPERIENCE
+        .cell-xs-5.cell-md-2
+          .counter-wrap
+            .heading-1
+              span.counter-preffix 0
+              span.counter(data-speed='2500') 7
+            p.small services offered
+        .cell-xs-5.cell-md-2
+          .counter-wrap
+            .heading-1
+              span.counter(data-step='1500') 26
+            p.small QUALIFIED SPECIALISTS
+        .cell-xs-5.cell-md-2
+          .counter-wrap
+            .heading-1
+              span.counter-preffix
+              span.counter(data-speed='1300') 12
+            p.small Partners
+
+
+  // Section Circle Progress Bars
+  section.section.section-lg.bg-white.text-center
+    .shell
+      h2 Progress Bars
+      .range.range-40.range-xs-center
+        .cell-xs-5.cell-md-2
+          // Circle Progress Bar
+          .progress-bar-circle(data-gradient='#f6516a', data-empty-fill='rgb(244,244,244)', data-size='184', data-thickness='5')
+            span 0.73
+          p.text-uppercase.text-bold Leadership
+
+        .cell-xs-5.cell-md-2
+          // Circle Progress Bar
+          .progress-bar-circle(data-gradient='#f6516a', data-empty-fill='rgb(244,244,244)', data-size='184', data-thickness='5')
+            span 0.11
+          p.text-uppercase.text-bold Management
+
+        .cell-xs-5.cell-md-2
+          // Circle Progress Bar
+          .progress-bar-circle(data-gradient='#f6516a', data-empty-fill='rgb(244,244,244)', data-size='184', data-thickness='5')
+            span 0.13
+          p.text-uppercase.text-bold Innovation and creativity
+
+
+        .cell-xs-5.cell-md-2
+          // Circle Progress Bar
+          .progress-bar-circle(data-gradient='#f6516a', data-empty-fill='rgb(244,244,244)', data-size='184', data-thickness='5')
+            span 0.59
+          p.text-uppercase.text-bold Resilience
+  ="\n"
+
+  section.section.text-center
+    .parallax-container(data-parallax-img='images/bg-02.jpg')
+      .parallax-content.section-lg.context-dark
+        .shell
+          h2 Countdown Timer
+          .range.range-xs-center
+            .cell-sm-10.cell-lg-9
+              // TimeCircles
+              .DateCountdown(data-date='2018-10-01 00:00:00' data-circle-fg-width='0.02' data-circle-bg-width='0.9' data-circle-bg='#ffffff' data-circle-inner-color='#ffffff')
+
+  .divider-section
+
+  // Page Footer
+  include ../sections/_footer-default

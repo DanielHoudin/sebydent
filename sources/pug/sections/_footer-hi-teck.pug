@@ -1,0 +1,58 @@
+// Contact us
+section.section.section-sm.bg-gray-bright.context-dark.ad-footer
+  .shell
+    .range.range-40
+      .cell-md-3.cell-sm-5
+        .preffix-xl-85.footer-item-custom.footer-item-custom-1(style='max-width: 274px')
+          h6.text-spacing-200.text-uppercase.font-base Latest news
+          .divider-default
+          .post-minimal-wrap
+            a.post-minimal(href='#')
+              .unit.unit-horizontal.unit-middle
+                .unit-left
+                  +jpg('post-01-80x68')
+                .unit-body
+                  p Top Technology Innovations
+                    span January 12, 2018
+
+            a.post-minimal(href='#')
+              .unit.unit-horizontal.unit-middle
+                .unit-left
+                  +jpg('post-02-80x68')
+                .unit-body
+                  p Regular Eye Examinations
+                    span January 12, 2018
+
+      .cell-md-3.cell-sm-5
+        .preffix-xl-45.footer-item-custom.footer-item-custom-2(style='max-width: 327px')
+          h6.text-spacing-200.text-uppercase.font-base Contact Information
+          .divider-default
+          .contact-data
+            dl
+              dt Phone:
+              dd: a.link-call(href='tel:#') 1-800-700-6200
+            dl
+              dt E-mail:
+              dd: a(href='mailto:#') info@demolink.org
+            dl.address
+              dt Address:
+              dd
+                | Open Everyday 24\7, am London,
+                br.veil.reveal-lg-block(style='line-height: 0')
+                =" "
+                | UK 10, Firs Avenue, Muswell Hill,
+
+      .cell-md-4
+        .preffix-xl-70.footer-item-custom.footer-item-custom-3(style='max-width: 433px')
+          h6.text-spacing-200.text-uppercase.font-base looking for a good doctor?
+          .divider-default
+          p.p-text Our seasoned and skilled team of physicians and practical nurses will leave no chance for any disease to survive!
+          a(href=config.contactLink).button.button-lg.button-primary.button-effect-ujarak make an Appointment
+
+footer.page-footer.section.text-center.page-footer-hi
+  .shell
+    p.copyright.preffix-xl-70= config.brandName
+      ="\t"
+      | &#169; #[span(class="copyright-year")].
+      =" "
+      a(href="privacy-policy.html") Privacy Policy

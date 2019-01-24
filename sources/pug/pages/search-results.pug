@@ -1,0 +1,35 @@
+extends  ../_skeleton
+
+//- Includes
+include  ../elements/_block-componentz
+
+block variables
+  - var activeCategory = ''
+
+block title
+  title Search results
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  // Search results
+  +breadcrumb-classic('images/bg-12.jpg', 'Search results',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Search results"
+    }
+  }
+  )
+
+  // Why choose us
+  section.section.section-lg.bg-white
+    .shell
+      .rd-search-results
+
+  // Page Footer
+  include ../sections/_footer-default

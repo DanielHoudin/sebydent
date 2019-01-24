@@ -1,0 +1,101 @@
+extends  ../_skeleton
+
+block variables
+  - var activeCategory = 'Departments'
+
+block title
+  title Departments
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  // Departments
+  +breadcrumb-classic('images/bg-02-style-1.jpg', 'Departments',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Departments"
+    }
+  }
+  )
+
+  // Departments
+  section.section.section-lg.bg-white
+    .shell
+      .range.range-60
+        .cell-lg-8
+          .range.range-40.range-lg-60
+            .cell-sm-33.cell-md-25
+              .thumb-default
+                a(href='#'): +jpg('departments-01-267x229')
+                h4.thumb-default-title: a(href='#')  Neurology
+                p Diagnosis and treatment of numerous neurological diseases.
+            .cell-sm-33.cell-md-25
+              .thumb-default
+                a(href='#'): +jpg('departments-02-267x229')
+                h4.thumb-default-title: a(href='#')  Dentistry
+                p Providing the highest quality oral care possible to our patients.
+            .cell-sm-33.cell-md-25
+              .thumb-default
+                a(href='#'): +jpg('departments-03-267x229')
+                h4.thumb-default-title: a(href='#')  Cardiology
+                p Diagnosis and treatment of specific diseases of the heart.
+            .cell-sm-33.cell-md-25
+              .thumb-default
+                a(href='#'): +jpg('departments-04-267x229')
+                h4.thumb-default-title: a(href='#')  Pediatrics
+                p Providing quality primary, secondary and tertiary childcare.
+            .cell-sm-33.cell-md-25
+              .thumb-default
+                a(href='#'): +jpg('departments-05-267x229')
+                h4.thumb-default-title: a(href='#')  Traumatology
+                p Providing the best medical care for the patients with sports injuries.
+            .cell-sm-33.cell-md-25
+              .thumb-default
+                a(href='#'): +jpg('departments-06-267x229')
+                h4.thumb-default-title: a(href='#')  Ophthalmology
+                p Our experts provide comprehensive care for people with eye diseases.
+            .cell-sm-33.cell-md-25
+              .thumb-default
+                a(href='diagnostics.html'): +jpg('departments-07-267x229')
+                h4.thumb-default-title: a(href='diagnostics.html')  Diagnostics
+                p Offering private outpatient consultations, diagnostic tests and treatment.
+            .cell-sm-33.cell-md-25
+              .thumb-default
+                a(href='#'): +jpg('departments-08-267x229')
+                h4.thumb-default-title: a(href='#')  Pulmonary
+                p Providing high-quality care to patients with pulmonary disorders.
+
+        .cell-lg-2
+          .aside-info
+            .aside-info-item
+              h4 Departments
+              ul
+                li: a(href='#') Neurology
+                li: a(href='#') Traumatology
+                li: a(href='#') Dentistry
+                li: a(href='#') Cardiology
+                li: a(href='#') Pulmonary
+                li: a(href='#') Pediatrics
+                li: a(href='#') ophtalmology
+                li: a(href='diagnostics.html') Diagnostics
+            .aside-info-item.aside-info-item-table
+              h4 Opening Hours
+              div
+                dl
+                  dt Weekdays
+                  dd 8.00 – 17.00
+                dl
+                  dt Saturday
+                  dd 9.30 – 17.30
+                dl
+                  dt Sunday
+                  dd 9.30 – 15.00
+
+
+  // Page Footer
+  include ../sections/_footer-default

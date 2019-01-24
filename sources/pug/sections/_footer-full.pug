@@ -1,0 +1,77 @@
+// Contact us
+section.section.section-sm.section-full-width.bg-gray-bright.context-dark
+  .shell
+    .range.range-40
+      .cell-lg-3.cell-sm-5
+        div(style='max-width: 274px')
+          h6.text-spacing-200.text-uppercase.font-base Contact Information
+          .divider-default
+          ul.list.list-lg
+            li
+              .unit.unit-spacing-xs.unit-horizontal.unit-custom.unit-middle
+                .unit-left
+                  span.icon.icon-md-big.icon-primary.mdi-phone
+                .unit-body
+                  a.link-footer.big.text-spacing-75.font-sec(href='tel:#') 1-800-700-6200
+
+            li
+              .unit.unit-spacing-xs.unit-horizontal.unit-custom.unit-middle
+                .unit-left
+                  span.icon.icon-md-biger.icon-primary.mdi-email-outline
+                .unit-body(style='position: relative; top: -1px')
+                  a.link-footer(href='mailto:#') info@demolink.org
+            li
+              .unit.unit-spacing-xs.unit-horizontal
+                .unit-left
+                  span.icon.icon-md-biger.icon-primary.mdi-map-marker
+                .unit-body(style='position: relative; top: -4px;')
+                  a.link-footer(href='#') 10 Firs Avenue, Muswell Hill, London N10
+
+      .cell-lg-3.cell-sm-5
+        div(style='max-width: 283px')
+          h6.text-spacing-200.text-uppercase.font-base Latest news
+          .divider-default
+          ul.list.list-lg
+            li
+              article.news-mini
+                h6.news-mini-title: a(href=config.postLink) Stress at Work – How to Reduce?
+                a.news-mini-time(href=config.postLink) January 12, 2018
+            li
+              article.news-mini
+                h6.news-mini-title: a(href=config.postLink) Helping Children Deal With Trauma
+                a.news-mini-time(href=config.postLink) January 23, 2018
+
+      .cell-lg-4
+        div
+          h6.text-spacing-200.text-uppercase.font-base have any questions? Contact us now
+          .divider-default
+          form.rd-mailform.rd-mailform-mini(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .rd-mailform-mini-left
+              .form-wrap.form-wrap-validation
+                label.form-label(for='forms-message-footer') Your Message
+                textarea#forms-message-footer.form-input(name='message', data-constraints='@Required')
+            .rd-mailform-mini-right
+              .form-wrap.form-wrap-validation
+                label.form-label(for='forms-email-footer') E-mail
+                input#forms-email-footer.form-input(type='email', name='email', data-constraints='@Email @Required')
+              .form-button
+                button.button.button-effect-ujarak.button-primary.button-block.button-square(type='submit') send message
+
+
+
+footer.page-footer-full.section.section-full-width
+  .shell
+    .range.range-15
+      .cell-sm-5
+        p.copyright= config.brandName
+          ="\t"
+          | &#169; #[span(class="copyright-year")].
+          =" "
+          a(href="privacy-policy.html") Privacy Policy
+      .cell-sm-5.text-sm-right
+        ul.list-inline
+          li(style='color: #6a7688') Follow Us
+          li: a.icon.fa-facebook(href='#')
+          li: a.icon.fa-twitter(href='#')
+          li: a.icon.fa-google-plus(href='#')
+          li: a.icon.fa-pinterest-p(href='#')
